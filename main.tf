@@ -21,17 +21,6 @@ resource "aws_subnet" "cap_subnet_pub_1a" {
 
 }
 
-resource "aws_subnet" "cap_subnet_priv_1a" {
-  vpc_id            = aws_vpc.cap_vpc_1.id
-  cidr_block        = "10.0.2.0/24"
-  availability_zone = "us-east-1a"
-
-  tags = {
-    "Name" = "cap_subnet_priv_1a"
-  }
-
-}
-
 resource "aws_internet_gateway" "cap_igw_1a" {
   vpc_id = aws_vpc.cap_vpc_1.id
 
